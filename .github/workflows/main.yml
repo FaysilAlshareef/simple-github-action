@@ -5,9 +5,11 @@ on:
       - main
 jobs:
   example-job:
-    runs-on: ububntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print a walcome message
         run: echo "Welcome to github actions"
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
+      - name: List repository files
+        run: ls -la
